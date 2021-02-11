@@ -18,6 +18,14 @@ describe 'navigate' do
     it 'has a title of posts' do
       expect(page).to have_content(/Posts/)
     end
+
+    it 'has a list of posts' do
+      post1 = Post.create(date: Date.today, rationale: "Post1")
+      post2 = Post.create(date: Date.today, rationale: "Post1")
+      visit posts_path
+
+      expect(page).to have_content(/Post1|Post2/)
+    end
   end
 
   describe 'creation' do
