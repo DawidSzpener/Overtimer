@@ -15,6 +15,8 @@ describe 'navigate' do
 
   describe 'creation' do
     before do
+      user = User.create(email: "test@test.com", password: "asdasd", password_confirmation: "asdasd", first_name: "Dawid", last_name: "Szef")
+      login_as(user, :scope => :user)
       visit new_post_path
     end
 
@@ -29,6 +31,15 @@ describe 'navigate' do
       click_on 'Save'
     
       expect(page).to have_content('Something')
+    end
+
+    it "will have user associated it" do    
+      fill_in 'post[date]', with: Date.today
+      fill_in 'post[rationale]', with: "User_Ass"
+
+      click_on 'Save'
+
+      expect(User.last.posts.last.rationale).to eq("User_Ass")
     end
   end
 end
