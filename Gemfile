@@ -34,3 +34,4 @@ end
 
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'gritter', '~> 1.2'
