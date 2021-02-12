@@ -12,6 +12,7 @@ class PostDashboard < Administrate::BaseDashboard
     id: Field::Number,
     date: Field::Date,
     rationale: Field::Text.with_options(searchable: true),
+    status: Field::Text.with_options(searchable: true),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -23,7 +24,7 @@ class PostDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
   user
-  id
+  status
   date
   rationale
   ].freeze
@@ -33,6 +34,7 @@ class PostDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
   user
   id
+  status
   date
   rationale
   created_at
