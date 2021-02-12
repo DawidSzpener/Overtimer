@@ -79,17 +79,10 @@ describe 'navigate' do
 
   describe "edit" do
     before do
-      @post = FactoryGirl.create(:post)
+      @post = Post.create(date: Date.today, rationale: "some", user_id: @user.id)
     end
 
-    it "can be accessed" do
-      visit posts_path
-      click_link "edit_#{@post.id}"
-
-      expect(page.status_code).to eq(200)
-    end
-
-    it "can be edited" do
+    it "can be edited by authorized user" do
       visit edit_post_path(@post)
 
       fill_in 'post[date]', with: Date.today
@@ -97,6 +90,16 @@ describe 'navigate' do
       click_on 'Save'
 
       expect(User.last.posts.last.rationale).to eq("Edited content")
+    end
+
+    it "cannot be eddited by a non authorised user" do
+      logout(:user)
+
+      non_authorized_user = FactoryGirl.create(:non_authorized_user)
+      login_as(non_authorized_user, :scope => :user)
+
+      visit edit_post_path(@post)
+      expect(current_path).to eq(root_path)
     end
   end
 end
