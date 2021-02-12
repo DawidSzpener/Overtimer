@@ -22,7 +22,7 @@ $ git clone https://github.com/DawidSzpener/Overtimer
 * [Ruby On Rails](https://rubyonrails.org/) - Ruby framework
 * [Enum]
 * [FactoryGirl]
-* [Gritter]
+* [Gritter] - Error messages
 * [Administrate]
 * [Pundit]
 
