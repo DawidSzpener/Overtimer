@@ -24,6 +24,7 @@ $ git clone https://github.com/DawidSzpener/Overtimer
 * [FactoryGirl]
 * [Gritter]
 * [Administrate]
+* [Pundit]
 
 ## Authors
 

@@ -26,11 +26,14 @@ class PostsController < ApplicationController
   end
 
   def edit
+    authorize @post
   end
 
   def update
+    authorize @post
+
     if @post.update(post_params)
-    redirect_to @post, notice: 'Your post was changed!'
+      redirect_to @post, notice: 'Your post was changed!'
     else
       render :edit
     end
