@@ -19,14 +19,17 @@ describe 'navigate' do
       expect(page).to have_content(/Posts/)
     end
 
-    it 'has a list of posts' do
-      post1 = FactoryGirl.create(:post)
-      post2 = FactoryGirl.create(:second_post)
+    it 'has a scope so that only creator sees it' do
+      post1 = Post.create(date: Date.today, rationale: "some", user_id: @user.id)
+      post2 = Post.create(date: Date.today, rationale: "some", user_id: @user.id)
+      other_user = User.create(first_name: "non", last_name: "authorized", email: "nontest@test.com", password: "asdasd", password_confirmation: "asdasd")
+      post_from_other_user = Post.create(date: Date.today, rationale: "should not be seen", user_id: other_user.id)
 
       visit posts_path
 
-      expect(page).to have_content(/1st rationale|2nd rationale/)
+      expect(page).to_not have_content(/should not be seen/)
     end
+
   end
 
   describe 'creation' do
@@ -69,6 +72,7 @@ describe 'navigate' do
   describe "delete" do
     it "it can be deleted" do
       @post = FactoryGirl.create(:post)
+      @post.update(user_id: @user.id)
 
       visit posts_path
       click_link "delete_post_#{@post.id}_from_index"
