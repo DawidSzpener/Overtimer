@@ -25,6 +25,7 @@ $ git clone https://github.com/DawidSzpener/Overtimer
 * [Gritter] - Error messages
 * [Administrate]
 * [Pundit]
+* [Puma] - web server
 
 ## Authors
 
