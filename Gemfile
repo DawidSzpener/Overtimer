@@ -39,3 +39,4 @@ gem 'jquery-rails'
 gem "administrate"
 gem "bourbon"
 gem 'coffee-rails'
+gem 'pundit', '~> 1.1'
