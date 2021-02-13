@@ -20,7 +20,7 @@ $ git clone https://github.com/DawidSzpener/Overtimer
 ## Built With
 
 * [Ruby On Rails](https://rubyonrails.org/) - Ruby framework
-* [Enum]
+* [Enum] - status helper
 * [FactoryGirl]
 * [Gritter] - Error messages
 * [Administrate]
