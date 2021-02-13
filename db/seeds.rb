@@ -19,7 +19,13 @@ puts "10 approved posts have been created"
 end
 puts "10 rejected posts have been created"
 
-20.times do |audit_log|
+3.times do |audit_log|
   AuditLog.create(start_date: (Date.today - 6.days), user_id: User.last.id, status: 0)
 end
-puts "20 audit logs have been created"
+3.times do |audit_log|
+  AuditLog.create(start_date: (Date.today - 13.days), user_id: User.last.id, status: 0)
+end
+3.times do |audit_log|
+  AuditLog.create(start_date: (Date.today - 20.days), user_id: User.last.id, status: 0)
+end
+puts "9 audit logs have been created"
