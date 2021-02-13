@@ -18,3 +18,8 @@ puts "10 approved posts have been created"
   Post.create(date: Date.today, rationale: "#{post} rationale content here", user_id: @user.id, status: "rejected", overtime_request: 2.5)
 end
 puts "10 rejected posts have been created"
+
+10.times do |audit_log|
+  AuditLog.create(start_date: (Date.today - 6.days), user_id: User.last.id, status: 0)
+end
+puts "10 audit logs have been created"
