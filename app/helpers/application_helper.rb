@@ -7,6 +7,14 @@ module ApplicationHelper
     status_span_generator status
   end
 
+  def employee?
+    !admin_types.include?(current_user.type)
+	end
+
+  def admin?
+    admin_types.include?(current_user.type)
+  end
+
   def admin_types 
     ['AdminUser']
   end
