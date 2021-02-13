@@ -26,6 +26,7 @@ $ git clone https://github.com/DawidSzpener/Overtimer
 * [Administrate]
 * [Pundit]
 * [Puma] - web server
+* [Kaminari] - Pagination
 
 ## Authors
 

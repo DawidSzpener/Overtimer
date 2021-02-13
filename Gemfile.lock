@@ -130,7 +130,7 @@ GEM
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     gritter (1.2.0)
-    i18n (1.8.8)
+    i18n (1.8.9)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
@@ -309,6 +309,7 @@ DEPENDENCIES
   gritter (~> 1.2)
   jbuilder (~> 2.7)
   jquery-rails
+  kaminari
   listen (~> 3.3)
   pg (~> 1.1)
   puma (~> 5.0)
