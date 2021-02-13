@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_02_13_092505) do
 
   create_table "audit_logs", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "status"
+    t.integer "status", default: 0
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
