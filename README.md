@@ -2,8 +2,7 @@
 
 Check out the deployed app [here]()
 
-Overtimer - application meant to help acquire and approve overtime while making the whole process more automated
-
+Overtimer - application meant to help approve overtime hours
 
 ## Getting Started
 
@@ -11,6 +10,9 @@ For local development:
 
 ```
 $ git clone https://github.com/DawidSzpener/Overtimer
+$ bundle install
+$ bundle exec rake db:setup
+$ rails s
 ```
 
 ## DEMO
@@ -20,13 +22,13 @@ $ git clone https://github.com/DawidSzpener/Overtimer
 ## Built With
 
 * [Ruby On Rails](https://rubyonrails.org/) - Ruby framework
-* [Enum] - enable status changes with policies
-* [FactoryGirl]
-* [Gritter] - Error messages
-* [Administrate]
-* [Pundit]
-* [Puma] - web server
-* [Kaminari] - Pagination
+* [Devise](https://github.com/heartcombo/devise) - User authentication
+* [Enum](https://github.com/dblock/ruby-enum) - Enable enumerating statuses eg. { approved: 0 }
+* [FactoryGirl] - Fixture replacement
+* [Gritter](https://github.com/RobinBrouwer/gritter) - Error messages
+* [Administrate] - Admin dashboard
+* [Pundit](https://github.com/varvet/pundit) - Creates policies (permissions management)
+* [Kaminari] - Post Pagination
 
 ## Authors
 

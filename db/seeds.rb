@@ -7,6 +7,7 @@ puts "1 user created"
 AuditLog.create(start_date: (Date.today - 6.days), user_id: User.last.id, status: 0)
 AuditLog.create(start_date: (Date.today - 13.days), user_id: User.last.id, status: 0)
 AuditLog.create(start_date: (Date.today - 20.days), user_id: User.last.id, status: 0)
+AuditLog.create(start_date: (Date.today - 27.days), user_id: User.last.id, status: 0)
 puts "3 audit logs have been created"
 
 10.times do |post|
