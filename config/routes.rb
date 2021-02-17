@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     end
   end
 
-
   namespace :admin do
       resources :users
       resources :admin_users
