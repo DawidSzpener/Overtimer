@@ -15,6 +15,20 @@ $ bundle exec rake db:setup
 $ rails s
 ```
 
+#### NOTE 
+
+User credentials:
+``` 
+email - test@test.com 
+password: asdasd
+```
+
+Admin credentials:
+```
+email: admintest@test.com
+password: asdasd
+```
+
 ## DEMO
 
 ![demo]()
