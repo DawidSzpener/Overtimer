@@ -31,7 +31,7 @@ password: asdasd
 
 ## DEMO
 
-![demo]()
+![demo](https://raw.githubusercontent.com/DawidSzpener/Overtimer/main/app/assets/images/overtimer.gif)
 
 ## Built With
 
