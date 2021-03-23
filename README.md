@@ -1,6 +1,6 @@
 # Overtimer
 
-Check out the deployed app [here]()
+Check out the deployed app [here](https://overtimer-app.herokuapp.com/)
 
 Overtimer - application meant to help approve overtime hours
 
@@ -38,11 +38,11 @@ password: asdasd
 * [Ruby On Rails](https://rubyonrails.org/) - Ruby framework
 * [Devise](https://github.com/heartcombo/devise) - User authentication
 * [Enum](https://github.com/dblock/ruby-enum) - Enable enumerating statuses eg. { approved: 0 }
-* [FactoryGirl] - Fixture replacement
+* [FactoryGirl](https://github.com/thoughtbot/factory_bot) - Fixture replacement
 * [Gritter](https://github.com/RobinBrouwer/gritter) - Error messages
-* [Administrate] - Admin dashboard
+* [Administrate](https://github.com/thoughtbot/administrate) - Admin dashboard
 * [Pundit](https://github.com/varvet/pundit) - Creates policies (permissions management)
-* [Kaminari] - Post Pagination
+* [Kaminari](https://github.com/kaminari/kaminari) - Post Pagination
 
 ## Authors
 
